@@ -22,6 +22,9 @@
 
 ### Imagens do Projeto
 
+- [Home Mobile](https://github.com/fabiomrm/movieflix-frontend/blob/main/home-mobile.png?raw=true)
+- [Home Medium](https://github.com/fabiomrm/movieflix-frontend/blob/main/home-medium.png?raw=true)
+- [Home Large](https://github.com/fabiomrm/movieflix-frontend/blob/main/home-fullscreen.png?raw=true)
 
 ### Detalhes
 - MEMBER: Pode avaliar um filme (inserindo um comentário);
