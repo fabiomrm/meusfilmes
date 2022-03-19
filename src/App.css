@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Open+Sans:wght@300;400;700&family=Red+Hat+Display:ital,wght@0,400;0,900;1,700&family=Roboto:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  text-decoration: none !important;
+  color: unset !important;
+}
+
+.base-card {
+  background: #6c6c6c;
+  padding: 1.25rem;
+  color: #fff;
+}
+
+.base-card h1 {
+  text-align: center;
+  font-weight: 300;
+  margin-top: 4.375rem;
+  margin-bottom: 3.125rem;
+}
+
+.btn-submit {
+  height: 3.125rem;
+  margin-top: 3.5rem;
+}
+
+.btn-submit button {
+  background: #ffc700;
+  height: 100%;
+  width: 100%;
+  border: none;
+  border-radius: 0.25rem;
+  font-weight: 800;
+  cursor: pointer;
+}

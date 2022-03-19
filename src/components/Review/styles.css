@@ -1,0 +1,30 @@
+.review-container {
+  margin-bottom: 1rem;
+}
+
+.review-title-area {
+  display: flex;
+  color: #fff;
+}
+
+.review-title-area {
+  margin-bottom: 0.5rem;
+}
+
+.review-title-area svg {
+}
+
+.review-title-area h1 {
+  font-size: 1rem;
+  margin-left: 0.8rem;
+}
+
+.review-content-area {
+  border: 1px solid #e1e1e1;
+  padding: 0.625rem 1.75rem 1.25rem 0.75rem;
+  border-radius: 0.25rem;
+}
+
+.review-content-area p {
+  color: #9e9e9e;
+}
