@@ -44,10 +44,10 @@ export const requestBackend = (config: AxiosRequestConfig) => {
 
 // Add a request interceptor
 axios.interceptors.request.use(function (config) {
-    console.log("interceptor antes da requisição")
+   
     return config;
 }, function (error) {
-    console.log("erro na requisição")
+    
     return Promise.reject(error);
 });
 
