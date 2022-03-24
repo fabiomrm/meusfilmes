@@ -1,5 +1,6 @@
 import { AxiosRequestConfig } from 'axios';
 import { MovieCard } from 'components/MovieCard';
+import { Pagination } from 'components/Pagination';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Movie } from 'types';
@@ -31,18 +32,18 @@ export const Movies = () => {
           <option value="">Aventura</option>
         </select>
       </div>
-      <div className="movies-area row">
+      <div className="row">
         {movies &&
           movies.map((movie) => (
-            <div className="col-sm-6"  key={movie.id}>
+            <div className="col-sm-6 col-lg-4 col-xl-3" key={movie.id}>
               <Link to={`/movies/${movie.id}`} key={movie.id}>
                 <MovieCard movie={movie} />
               </Link>
             </div>
           ))}
-
-        {/* <Link to="/movies/1">Acessar /movies/1</Link>
-        <Link to="/movies/2">Acessar /movies/2</Link> */}
+      </div>
+      <div className="row">
+        <Pagination />
       </div>
     </div>
   );

@@ -21,6 +21,7 @@
 }
 
 .movie-card-content-container h1 {
+  font-weight: 800;
   margin-bottom: 0;
   font-size: 1.25rem;
   letter-spacing: -0.015em;
@@ -36,4 +37,11 @@
 .movie-card-content-container p.movie-card-content-subTitle {
   font-size: 0.8rem;
   letter-spacing: -0.015em;
+}
+
+
+@media (min-width: 992px) {
+  .movie-card-content-container {
+    min-height: 8.75rem;
+  }
 }
