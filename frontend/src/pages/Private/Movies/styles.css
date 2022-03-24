@@ -3,30 +3,18 @@
   color: #fff;
 }
 
+.movies-filter-container {
+  margin-bottom: 2rem;
+}
+
 .movies-container h1 {
   font-weight: 800;
   font-size: 1.3rem;
   margin-bottom: 2rem;
 }
 
-.movies-area {
-  display: flex;
-  flex-direction: column;
-}
-
-.movies-area a {
-  margin-bottom: 1rem;
-  font-size: 1.125rem;
-}
-
 @media (min-width: 920px) {
   .movies-container h1 {
     font-size: 3rem;
   }
-
-  .movies-area a {
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-  }
-  
 }

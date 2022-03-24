@@ -1,0 +1,39 @@
+.movie-card {
+  background: #6c6c6c;
+  color: #fff;
+  border-radius: 0.25rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.25);
+}
+
+.movie-card-image-container {
+  padding-top: 1.625rem;
+  padding-bottom: 0.625rem;
+}
+
+.movie-card-image-container img {
+  width: 100%;
+}
+
+.movie-card-content-container {
+  padding-left: 1rem;
+  padding-bottom: 3.25rem;
+}
+
+.movie-card-content-container h1 {
+  margin-bottom: 0;
+  font-size: 1.25rem;
+  letter-spacing: -0.015em;
+}
+
+.movie-card-content-container p.movie-card-content-year {
+  margin-bottom: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffc700;
+}
+
+.movie-card-content-container p.movie-card-content-subTitle {
+  font-size: 0.8rem;
+  letter-spacing: -0.015em;
+}

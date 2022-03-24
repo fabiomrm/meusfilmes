@@ -6,6 +6,14 @@ export type User = {
     email: string;
 }
 
+export type Movie = {
+    id: number;
+    title: string;
+    subTitle: string;
+    year: number;
+    imgUrl: string;
+}
+
 export type ReviewType = {
     id: number;
     text: number;
