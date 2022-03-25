@@ -39,9 +39,17 @@
   letter-spacing: -0.015em;
 }
 
+@media (min-width: 576px) {
+  .movie-card-content-container {
+    padding-top: 2rem;
+    height: 11rem;
+  }
+}
+
 
 @media (min-width: 992px) {
   .movie-card-content-container {
-    min-height: 8.75rem;
+    padding-top: 0rem;
+    height: 8.75rem;
   }
 }

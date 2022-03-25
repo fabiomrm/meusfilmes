@@ -6,7 +6,7 @@ export type User = {
     email: string;
 }
 
-export type Movie = {
+export type MovieType = {
     id: number;
     title: string;
     subTitle: string;

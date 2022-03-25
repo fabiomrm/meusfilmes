@@ -12,6 +12,12 @@ a {
   color: unset !important;
 }
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 .base-card {
   background: #6c6c6c;
   padding: 1.25rem;

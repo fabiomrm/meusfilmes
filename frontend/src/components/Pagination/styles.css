@@ -1,0 +1,32 @@
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination-item {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: #e1e1e1;
+  font-size: 1.125rem;
+  font-weight: 800;
+  letter-spacing: -0.015rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.625rem;
+}
+
+.pagination-item-active {
+    background: #FFC700;
+}
+
+.arrow-next {
+  transform: rotate(180deg);
+}
+
+.arrow-inactive {
+    color: #9E9E9E;
+}

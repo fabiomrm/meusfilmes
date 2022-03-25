@@ -3,13 +3,13 @@ import { MovieCard } from 'components/MovieCard';
 import { Pagination } from 'components/Pagination';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Movie } from 'types';
+import { MovieType } from 'types';
 import { requestBackend } from 'utils/requests';
 
 import './styles.css';
 
 export const Movies = () => {
-  const [movies, setMovies] = useState<Movie[]>([]);
+  const [movies, setMovies] = useState<MovieType[]>([]);
 
   useEffect(() => {
     getMovies();
