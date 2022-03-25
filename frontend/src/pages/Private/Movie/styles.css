@@ -66,4 +66,40 @@ p.movie-details-content-container-year {
   .movie-details-content-container p {
     font-size: 1.5rem;
   }
+
+  .movie-details-description-container p{
+    font-size: 1.125rem;
+  }
+}
+
+
+@media (min-width: 992px) {
+  .movie-container {
+    padding: 2.5rem;
+  }
+
+  .movie-details-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .movie-details-image-container img {
+    width: 36rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .movie-details-area {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .movie-details-image-container {
+    display: flex;
+    align-items:flex-start;
+  }
+
+  .movie-details-content-container h1{
+    margin-top:0;
+  }
 }

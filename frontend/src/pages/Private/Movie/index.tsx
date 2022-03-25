@@ -52,11 +52,9 @@ export const Movie = () => {
           <h1>{movie?.title}</h1>
           <p className="movie-details-content-container-year">{movie?.year}</p>
           <p>{movie?.subTitle}</p>
-        </div>
-        <div className="movie-details-description-container">
-          <p>
-            {movie?.synopsis}
-          </p>
+          <div className="movie-details-description-container">
+            <p>{movie?.synopsis}</p>
+          </div>
         </div>
       </div>
 
