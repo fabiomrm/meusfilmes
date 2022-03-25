@@ -12,6 +12,14 @@ export type MovieType = {
     subTitle: string;
     year: number;
     imgUrl: string;
+    synopsis?: string;
+    genre?: Genre;
+}
+
+
+export type Genre = {
+    id: number;
+    name: string;
 }
 
 export type ReviewType = {
