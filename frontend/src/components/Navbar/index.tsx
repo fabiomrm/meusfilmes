@@ -25,7 +25,7 @@ export const Navbar = () => {
     <nav className="main-nav">
       <div className="container">
         <Link to="/">
-          <h4>MovieFlix</h4>
+          <h4>Meus Filmes</h4>
         </Link>
         <div className="btn-area">
           {authContextData.authenticated && (
