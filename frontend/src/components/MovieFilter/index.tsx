@@ -10,7 +10,11 @@ export type MovieFilterData = {
   genre: Genre;
 };
 
-export const MovieFilter = () => {
+type Props = {
+  onSubmitFilter: (data: MovieFilterData) => void;
+};
+
+export const MovieFilter = ({ onSubmitFilter }: Props) => {
   const [filterOptions, setFilterOptions] = useState<Genre[]>([]);
   const { control, setValue, getValues } = useForm<MovieFilterData>();
 
@@ -27,7 +31,7 @@ export const MovieFilter = () => {
       genre: getValues('genre'),
     };
 
-    console.log(obj)
+    onSubmitFilter(obj);
   };
 
   return (

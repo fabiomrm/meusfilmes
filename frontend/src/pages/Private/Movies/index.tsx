@@ -36,7 +36,7 @@ export const Movies = () => {
       params: {
         page: controlComponentsData.activePage,
         size: 3,
-        genreId: controlComponentsData.filterData.genre.id,
+        genreId: controlComponentsData.filterData.genre?.id,
       },
     };
     requestBackend(config).then(({ data }) => setPage(data));
@@ -53,10 +53,17 @@ export const Movies = () => {
     });
   };
 
+  const handleSubmitFilter = (data: MovieFilterData) => {
+    setControlComponentsData({
+      activePage: 0,
+      filterData: data,
+    });
+  };
+
   return (
     <div className="movies-container">
       <div className="movies-filter-area-container">
-        <MovieFilter />
+        <MovieFilter onSubmitFilter={handleSubmitFilter} />
       </div>
       <div className="row">
         {page &&
