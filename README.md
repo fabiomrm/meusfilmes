@@ -1,7 +1,7 @@
-<h1 align="center">Movieflix Frontend</h1>
+<h1 align="center">Meus Filmes</h1>
 
 <p align="center">
-	Projeto de conclusão da terceira etapa do curso <a href="https://www.linkedin.com/school/devsuperior/">Dev Superior</a>.
+	Projeto de conclusão da quarta etapa do curso <a href="https://www.linkedin.com/school/devsuperior/">Dev Superior</a>.
 </p>
 <h4 align="center"> 
 	✔️...Finalizado...✔️
@@ -13,7 +13,9 @@
 - Autenticação/Autorização (OAuth 2.0);
 - React Hook Forms;
 - Axios;
-- Gerenciamento de contexto global (Context API).
+- Gerenciamento de contexto global (Context API);
+- Filtragem;
+- Paginação.
 
 ### 📝 Layout
 
@@ -35,10 +37,16 @@
 ### 🛠 Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
+
+#### Frontend
+
 - HTML/CSS/Javascript
 - Bootstrap
 - Typescript
 - ReactJS
+
+#### Backend
+- Java/Spring - repositório [aqui](https://github.com/fabiomrm/movieflix)
 
 ### Autor
 ---
