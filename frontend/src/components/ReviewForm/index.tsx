@@ -2,6 +2,7 @@ import { AxiosRequestConfig } from 'axios';
 import { useForm } from 'react-hook-form';
 import { ReviewType } from 'types';
 import { requestBackend } from 'utils/requests';
+import { toast } from 'react-toastify';
 
 import './styles.css';
 
@@ -34,10 +35,14 @@ export const ReviewForm = ({ movieId, hasNewReview }: Props) => {
     };
     requestBackend(config)
       .then((res) => {
+        toast.info('Comentário cadastrado com sucesso!');
         setValue('text', '');
         hasNewReview(res.data);
       })
-      .catch((err) => console.log('Error: ' + err));
+      .catch((err) => {
+        toast.error('Erro ao cadastrar o produto!');
+        console.log('Error: ' + err);
+      });
   };
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
@@ -53,9 +58,7 @@ export const ReviewForm = ({ movieId, hasNewReview }: Props) => {
             errors.text ? 'is-invalid' : ''
           }`}
         />
-        <div className="invalid-feedback d-block">
-          {errors.text?.message}
-        </div>
+        <div className="invalid-feedback d-block">{errors.text?.message}</div>
         <div className="btn-submit btn-review">
           <button type="submit">SALVAR AVALIAÇÃO</button>
         </div>

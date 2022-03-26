@@ -1,6 +1,7 @@
 .movie-genre-select__control {
   background: #6c6c6c !important;
   border: 1px solid #e1e1e1 !important;
+  width: 16.25rem;
 }
 
 .movie-genre-select__input {
