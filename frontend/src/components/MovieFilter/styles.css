@@ -9,7 +9,7 @@
 }
 
 .movie-genre-select__menu-list {
-    background: #6C6C6C;
+    background: #6C6C6C !important;
 }
 
 .movie-genre-select__placeholder {
