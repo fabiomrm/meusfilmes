@@ -6,7 +6,7 @@ import { Genre } from 'types';
 
 import './styles.css';
 
-type MovieFilterData = {
+export type MovieFilterData = {
   genre: Genre;
 };
 

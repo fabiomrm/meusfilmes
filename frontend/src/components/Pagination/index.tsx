@@ -4,25 +4,32 @@ import ReactPaginate from 'react-paginate';
 
 import './styles.css';
 
-export const Pagination = () => {
-    return(
-        <ReactPaginate 
-            pageCount={3}
-            pageRangeDisplayed={3}
-            containerClassName="pagination-container"
-            pageLinkClassName="pagination-item"
-            
-            activeLinkClassName="pagination-item-active"
-            previousLabel={
-                <div><ArrowIcon /></div>
-            }
+type Props = {
+  pageCount: number;
+  range: number;
+  onChange?: (pageNumber: number) => void;
+};
 
-
-            nextLabel={
-                <div><ArrowIcon /></div>
-            }
-
-            nextClassName="arrow-next"
-        />
-    )
-}
+export const Pagination = ({ pageCount, range, onChange }: Props) => {
+  return (
+    <ReactPaginate
+      pageCount={pageCount}
+      pageRangeDisplayed={range}
+      containerClassName="pagination-container"
+      pageLinkClassName="pagination-item"
+      activeLinkClassName="pagination-item-active"
+      previousLabel={
+        <div>
+          <ArrowIcon />
+        </div>
+      }
+      nextLabel={
+        <div>
+          <ArrowIcon />
+        </div>
+      }
+      nextClassName="arrow-next"
+      onPageChange={(items) => (onChange ? onChange(items.selected) : {})}
+    />
+  );
+};

@@ -1,29 +1,56 @@
 import { AxiosRequestConfig } from 'axios';
 import { MovieCard } from 'components/MovieCard';
-import { MovieFilter } from 'components/MovieFilter';
+import { MovieFilter, MovieFilterData } from 'components/MovieFilter';
 import { Pagination } from 'components/Pagination';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { MovieType } from 'types';
+import { SpringPage } from 'types/vendor';
 import { requestBackend } from 'utils/requests';
 
 import './styles.css';
 
+type ControlComponentsData = {
+  activePage: number;
+  filterData: MovieFilterData;
+};
+
 export const Movies = () => {
-  const [movies, setMovies] = useState<MovieType[]>([]);
+  const [page, setPage] = useState<SpringPage<MovieType>>();
+  const [controlComponentsData, setControlComponentsData] =
+    useState<ControlComponentsData>({
+      activePage: 0,
+      filterData: {
+        genre: {
+          id: 0,
+          name: '',
+        },
+      },
+    });
 
-  useEffect(() => {
-    getMovies();
-  }, []);
-
-  const getMovies = () => {
+  const getMovies = useCallback(() => {
     const config: AxiosRequestConfig = {
       method: 'GET',
       url: '/movies',
       withCredentials: true,
+      params: {
+        page: controlComponentsData.activePage,
+        size: 3,
+        genreId: controlComponentsData.filterData.genre.id,
+      },
     };
+    requestBackend(config).then(({ data }) => setPage(data));
+  }, [controlComponentsData]);
 
-    requestBackend(config).then(({ data }) => setMovies(data.content));
+  useEffect(() => {
+    getMovies();
+  }, [getMovies]);
+
+  const handlePageChange = (pageNumber: number) => {
+    setControlComponentsData({
+      activePage: pageNumber,
+      filterData: controlComponentsData.filterData,
+    });
   };
 
   return (
@@ -32,8 +59,8 @@ export const Movies = () => {
         <MovieFilter />
       </div>
       <div className="row">
-        {movies &&
-          movies.map((movie) => (
+        {page &&
+          page.content.map((movie) => (
             <div className="col-sm-6 col-lg-4 col-xl-3" key={movie.id}>
               <Link to={`/movies/${movie.id}`} key={movie.id}>
                 <MovieCard movie={movie} />
@@ -42,7 +69,11 @@ export const Movies = () => {
           ))}
       </div>
       <div className="row">
-        <Pagination />
+        <Pagination
+          pageCount={page ? page.totalPages : 0}
+          range={3}
+          onChange={handlePageChange}
+        />
       </div>
     </div>
   );
