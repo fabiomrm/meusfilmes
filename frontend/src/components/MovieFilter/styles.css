@@ -1,0 +1,22 @@
+.movie-genre-select__control {
+  background: #6c6c6c !important;
+  border: 1px solid #e1e1e1 !important;
+}
+
+.movie-genre-select__input {
+  background: unset !important;
+  color: #fff !important;
+}
+
+.movie-genre-select__menu-list {
+    background: #6C6C6C;
+}
+
+.movie-genre-select__placeholder {
+  color: #939393 !important;
+  padding-left: ;
+}
+
+.movie-genre-select__indicator-separator {
+  display: none;
+}

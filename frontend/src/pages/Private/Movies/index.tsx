@@ -1,5 +1,6 @@
 import { AxiosRequestConfig } from 'axios';
 import { MovieCard } from 'components/MovieCard';
+import { MovieFilter } from 'components/MovieFilter';
 import { Pagination } from 'components/Pagination';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -27,10 +28,8 @@ export const Movies = () => {
 
   return (
     <div className="movies-container">
-      <div className="movies-filter-container base-card">
-        <select name="" id="" placeholder="Gênero">
-          <option value="">Aventura</option>
-        </select>
+      <div className="movies-filter-area-container">
+        <MovieFilter />
       </div>
       <div className="row">
         {movies &&

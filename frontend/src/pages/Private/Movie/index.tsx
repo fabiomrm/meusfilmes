@@ -3,11 +3,11 @@ import { useEffect, useState } from 'react';
 import { getTokenData } from 'utils/auth';
 import { useParams } from 'react-router-dom';
 
-import './styles.css';
 import { AxiosRequestConfig } from 'axios';
 import { requestBackend } from 'utils/requests';
 import { MovieType, ReviewType } from 'types';
 import { ReviewForm } from 'components/ReviewForm';
+import './styles.css';
 
 type UrlParams = {
   movieId: string;
